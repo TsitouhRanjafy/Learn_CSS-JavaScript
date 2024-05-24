@@ -1,0 +1,41 @@
+body {
+  background: #131316;
+  color: #ffffff;
+  font-family: 'Poppins',sans-serif;
+  padding: 0;
+  margin: 0; }
+  body section {
+    display: grid;
+    place-items: center;
+    align-items: center;
+    min-height: 100vh;
+    border: solid 1px #545454;
+    margin: 0px 8px; }
+    body section .text.un {
+      opacity: 0; }
+      body section .text.un.show {
+        opacity: 1;
+        transition: 800ms linear; }
+    body section .text.deux {
+      transform: scale(0.1); }
+      body section .text.deux.show {
+        transform: scale(1);
+        transition: 1s linear; }
+    body section .text.trois {
+      position: absolute;
+      letter-spacing: 50px;
+      opacity: O 0.1; }
+      body section .text.trois.show {
+        letter-spacing: 2px;
+        transition: 1s;
+        opacity: 1; }
+    body section .paragraphe.un {
+      transform: translateX(100%); }
+      body section .paragraphe.un.show {
+        transform: translateX(0%);
+        transition: 800ms ease-in; }
+    body section .paragraphe.deux {
+      transform: translateY(-200%); }
+      body section .paragraphe.deux.show {
+        transform: translateY(0%);
+        transition: 800ms ease-in; }

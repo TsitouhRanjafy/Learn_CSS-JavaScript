@@ -1,0 +1,59 @@
+body{
+    background: #131316;
+    color: #ffffff;
+    font-family: 'Poppins',sans-serif;
+    padding: 0;
+    margin: 0;
+    section{
+        display: grid;
+        place-items:center;  
+        align-items: center;
+        min-height: 100vh;
+        border: solid 1px #545454;
+        margin: 0px 8px;
+        .text{
+            &.un{
+                opacity: 0;
+                &.show{
+                    opacity: 1;
+                    transition: 800ms linear;
+                }
+            }
+            &.deux{
+                transform: scale(0.1);
+                &.show{
+                    transform: scale(1);
+                    transition: 1s linear;
+                }
+            }
+            &.trois{
+                position: absolute;
+                letter-spacing: 50px;
+                opacity: O.1;
+                &.show{
+                    letter-spacing: 2px;
+                    transition: 1s;
+                    opacity: 1;
+                }
+                
+            }
+        }
+        .paragraphe{
+            &.un{
+                transform: translateX(100%);
+                &.show{
+                    transform: translateX(0%);
+                    transition: 800ms ease-in;
+                }
+            }
+            &.deux{
+                transform: translateY(-200%);
+                &.show{
+                    transform: translateY(0%);
+                    transition: 800ms ease-in;
+                }
+            }
+        }
+
+    }
+}
