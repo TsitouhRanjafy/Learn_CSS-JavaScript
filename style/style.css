@@ -1,0 +1,73 @@
+::-webkit-scrollbar {
+  width: 0px; }
+
+@keyframes animateBar {
+  0%, 100% {
+    filter: hue-rotate(0deg); }
+  50% {
+    filter: hue-rotate(360deg); } }
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "consolas" sans-serif;
+  color: whitesmoke; }
+
+body #scrollpath {
+  width: 2px;
+  height: 100%;
+  background-color: #303030;
+  position: fixed;
+  z-index: 99;
+  right: 0;
+  top: 0; }
+
+body #progressbar {
+  width: 2px;
+  position: fixed;
+  z-index: 100;
+  background: linear-gradient(to top, red, yellow);
+  animation: animateBar 3s linear infinite;
+  right: 0;
+  top: 0; }
+
+body #progressbar::before, body #progressbar::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, red, yellow);
+  left: 0;
+  top: 0;
+  position: absolute;
+  filter: blur(5px); }
+
+body section {
+  padding: 20px 40px;
+  background-color: #242424; }
+  body section h2 {
+    font-size: 2.5rem;
+    filter: hue-rotate(360deg); }
+  body section .test {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    filter: hue-rotate(140deg); }
+  body section p {
+    columns: 3;
+    text-wrap: balance;
+    font-family: "consolas" sans-serif;
+    letter-spacing: 2px;
+    font-size: 1.2rem; }
+
+@media (max-width: 576px) {
+  ::-webkit-scrollbar {
+    display: none; }
+  body section {
+    overflow: none; }
+    body section h2 {
+      font-size: 1.5rem;
+      filter: hue-rotate(360deg); }
+    body section p {
+      columns: 1;
+      letter-spacing: 1px;
+      font-size: 0.8rem; } }
