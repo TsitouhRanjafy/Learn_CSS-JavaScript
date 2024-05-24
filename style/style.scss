@@ -1,0 +1,33 @@
+.carousel{
+    width: 100%;
+    height: 166px;
+    border: solid 1px red;
+    .card-container{
+        width: calc(100% - 16px);
+        margin: 8px;
+        flex: 0 0 calc(100% - 16px);
+        display: flex;
+        border: solid 1px green;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory; // Force the scroll to the start of a scroll-snap area (scroll-snap-align for fils)
+        gap: 8px;
+        .card{
+            min-width: 300px;
+            height: 150px; 
+            scroll-snap-align: start; // Set the element focus position in scroll container 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #17BF60;
+            color: #4a544C;
+            border-radius: 8px;
+            &:hover{
+                background: #1ED96F;
+            }
+        }
+        &::-webkit-scrollbar{
+            display: none; // hide scrollbar in Chrome,Safari and Opera
+        }
+    }
+}
